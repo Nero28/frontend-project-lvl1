@@ -1,7 +1,7 @@
 {
   "name": "nerobraingames",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.3",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "src/bin/brain-games.js"
   },
@@ -18,5 +18,8 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
