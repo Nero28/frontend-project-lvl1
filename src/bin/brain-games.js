@@ -1,3 +1,4 @@
-#!/usr/local/bin/node 
-import { greeting } from '..';
+#!/usr/local/bin/node
+import greeting from '..';
 
+greeting();
