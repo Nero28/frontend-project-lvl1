@@ -146,7 +146,7 @@ export const gcd = () => {
     const num2 = Math.floor(Math.random() * 47);
     console.log(`Question: ${num1} ${num2}`);
     const decision = searchGcd(num1, num2);
-    console.log(decision);
+    // console.log(decision);
     const answer = readlineSync.question('Your answer: ');
     returnTripleСheck(decision, answer);
   };
