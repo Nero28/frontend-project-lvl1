@@ -3,3 +3,4 @@
 [![Build Status](https://travis-ci.org/Nero28/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Nero28/frontend-project-lvl1)
 https://asciinema.org/a/NhWVva3j6AyX3tAZLQkuNVAE5
 https://asciinema.org/a/D5xARj8SeHBDAWWJvxjoDWUFI
+https://asciinema.org/a/ZurHgkx5cPvjca80PdQzyAEIH
