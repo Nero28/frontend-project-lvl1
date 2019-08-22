@@ -1,8 +1,8 @@
-import { greeting, questEven, calc } from '../core';
+import { greeting, questCalc, calc } from '../core';
 
 const calcGames = () => {
   greeting();
-  questEven();
+  questCalc();
   calc();
 };
 export default calcGames;
