@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-
+import { cons, car, cdr } from '@hexlet/pairs';
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');
@@ -14,6 +14,10 @@ export const questCalc = () => {
 };
 export const questGcd = () => {
   console.log('Find the greatest common divisor of given numbers.');
+  console.log('');
+};
+export const questProgr = () => {
+  console.log('What number is missing in the progression?');
   console.log('');
 };
 export const userName = () => {
@@ -149,6 +153,60 @@ export const gcd = () => {
     // console.log(decision);
     const answer = readlineSync.question('Your answer: ');
     returnTripleСheck(decision, answer);
+  };
+  question();
+};
+
+
+export const arifmProgr = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('');
+  let current = 1;
+
+  const random = (min, max) => {
+    const rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  };
+  const question = () => {
+    let sequence = 0;
+    const rand = random(1, 10);
+    const start = Math.floor(Math.random() * 100);
+    const step = rand;
+    let result = start;
+    let strResult = '';
+    let num = 0;
+    const returnSeq = () => {
+      while (sequence < 10) {
+        result += step;
+        sequence += 1;
+        if (rand === sequence) {
+          strResult = `${strResult} .. `;
+          num = result;
+        } else {
+          strResult = `${strResult} ${start + step * sequence} `;
+        }
+      }
+      return cons(strResult, num);
+    };
+    const returnTripleСheck = (realanswer, useranswer) => {
+      if (Number(realanswer) === Number(useranswer)) {
+        while (current < 3) {
+          current += 1;
+          console.log('Correct!');
+          return question();
+        }
+        console.log(`Congratulations , ${name}!`);
+      } else {
+        return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was '${realanswer}'.Let's try again, ${name}!`);
+      }
+      return false;
+    };
+    const expression = car(returnSeq());
+    const realanswer = cdr(returnSeq());
+    console.log(`Question: ${expression}`);
+    const answer = readlineSync.question('Your answer: ');
+    returnTripleСheck(realanswer, answer);
   };
   question();
 };
