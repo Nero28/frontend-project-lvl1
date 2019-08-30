@@ -1,12 +1,13 @@
 {
   "name": "nerobraingames",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "src/core.js",
   "bin": {
     "brain-even": "src/bin/brain-even.js",
     "brain-calc": "src/bin/brain-calc.js",
     "brain-gcd": "src/bin/brain-gcd.js",
-    "brain-progression": "src/bin/brain-progression.js"
+    "brain-progression": "src/bin/brain-progression.js",
+    "brain-prime": "src/bin/brain-prime.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

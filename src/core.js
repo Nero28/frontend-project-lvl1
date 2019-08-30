@@ -20,6 +20,10 @@ export const questProgr = () => {
   console.log('What number is missing in the progression?');
   console.log('');
 };
+export const questPrime = () => {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log('');
+};
 export const userName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -205,6 +209,49 @@ export const arifmProgr = () => {
     const expression = car(returnSeq());
     const realanswer = cdr(returnSeq());
     console.log(`Question: ${expression}`);
+    const answer = readlineSync.question('Your answer: ');
+    returnTripleСheck(realanswer, answer);
+  };
+  question();
+};
+
+export const isPrime = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('');
+  let current = 1;
+  const random = (min, max) => {
+    const rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  };
+  const question = () => {
+    const rand = random(1, 1000);
+    const prime = (number) => {
+      if (number < 2) {
+        return 'no';
+      }
+      for (let i = 2; i < number; i += 1) {
+        if (number % i === 0) {
+          return 'no';
+        }
+      }
+      return 'yes';
+    };
+    const returnTripleСheck = (realanswer, useranswer) => {
+      if (realanswer === useranswer) {
+        while (current < 3) {
+          current += 1;
+          console.log('Correct!');
+          return question();
+        }
+        console.log(`Congratulations , ${name}!`);
+      } else {
+        return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was '${realanswer}'.Let's try again, ${name}!`);
+      }
+      return false;
+    };
+    console.log(`Question: ${rand}`);
+    const realanswer = prime(rand);
     const answer = readlineSync.question('Your answer: ');
     returnTripleСheck(realanswer, answer);
   };
