@@ -4,10 +4,7 @@ import { car, cdr } from '@hexlet/pairs';
 const greeting = () => {
   console.log('Welcome to the Brain Games!');
 };
-const isRules = (rules) => {
-  console.log(rules);
-  console.log('');
-};
+
 const requestName = () => {
   const name = readlineSync.question('May I have your name? ');
   return name;
@@ -17,32 +14,35 @@ export const getRandomNum = (min, max) => {
   return Math.floor(rand);
 };
 
-const getUserAnswer = (question) => {
-  console.log(`Question: ${question}`);
+const getUserAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
 };
 
 
-export const startGame = (rule, game) => {
+export const startGame = (description, game) => {
   greeting();
-  isRules(rule);
+  console.log(description);
+  console.log('');
   const name = requestName();
   console.log(`Hello, ${name}!`);
   console.log('');
+  const roundsCount = 3;
   const iter = (acc) => {
-    if (acc === 3) {
+    if (acc === roundsCount) {
       return console.log(`Congratulations , ${name}!`);
     }
     const foo = game();
     const question = car(foo);
-    const userAnswer = getUserAnswer(question);
+    console.log(`Question: ${question}`);
+    const userAnswer = getUserAnswer();
     const correctAnswer = cdr(foo);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
       return iter(acc + 1);
     }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.Let's try again, ${name}!`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Lets try again, ${name}!`);
     return null;
   };
   iter(0);

@@ -1,8 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import { startGame, getRandomNum } from '../core';
 
-const rule = 'Find the greatest common divisor of given numbers.';
-const algorEvklid = (first, second) => {
+const description = 'Find the greatest common divisor of given numbers.';
+const definitionGcd = (first, second) => {
   let result = 0;
   let value = 0;
   if (first >= second) {
@@ -11,7 +11,7 @@ const algorEvklid = (first, second) => {
       value = second;
       return value;
     }
-    return algorEvklid(second, result);
+    return definitionGcd(second, result);
   }
   if (first <= second) {
     result = second % first;
@@ -20,14 +20,14 @@ const algorEvklid = (first, second) => {
       return value;
     }
   }
-  return algorEvklid(first, result);
+  return definitionGcd(first, result);
 };
-const searchingGCD = () => {
+const getGcd = () => {
   const num1 = getRandomNum(1, 47);
   const num2 = getRandomNum(1, 47);
-  const numbers = `${num1} ${num2}`;
-  const result = algorEvklid(num1, num2);
-  return cons(numbers, result.toString());
+  const questionGame = `${num1} ${num2}`;
+  const answerGame = definitionGcd(num1, num2);
+  return cons(questionGame, answerGame.toString());
 };
-const play = () => startGame(rule, searchingGCD);
+const play = () => startGame(description, getGcd);
 export default play;
