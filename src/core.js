@@ -19,18 +19,18 @@ const getUserAnswer = () => {
   return answer;
 };
 
-
 export const startGame = (description, game) => {
   greeting();
   console.log(description);
   console.log('');
-  const name = requestName();
-  console.log(`Hello, ${name}!`);
+  const userName = requestName();
+  console.log(`Hello, ${userName}!`);
   console.log('');
   const roundsCount = 3;
   const iter = (acc) => {
     if (acc === roundsCount) {
-      return console.log(`Congratulations , ${name}!`);
+      console.log(`Congratulations , ${userName}!`);
+      return true;
     }
     const foo = game();
     const question = car(foo);
@@ -42,7 +42,7 @@ export const startGame = (description, game) => {
       return iter(acc + 1);
     }
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Lets try again, ${name}!`);
+    console.log(`Lets try again, ${userName}!`);
     return null;
   };
   iter(0);
