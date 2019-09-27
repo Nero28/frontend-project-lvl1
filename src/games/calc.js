@@ -1,33 +1,40 @@
-import { cons } from '@hexlet/pairs';
+import { cons, car, cdr } from '@hexlet/pairs';
 import { startGame, getRandomNum } from '../core';
 
 
 const description = 'What is the result of the expression?';
-const getRandomMathExpession = () => {
-  let answerGame = 0;
-  let questionGame = '';
-  const sum = (num1, num2) => (num1 + num2);
-  const diff = (num1, num2) => (num1 - num2);
-  const multi = (num1, num2) => (num1 * num2);
-  const operationsList = '+-*';
-  const random = getRandomNum(0, operationsList.length - 1);
-  const first = getRandomNum(1, 100);
-  const second = getRandomNum(1, 100);
+const getRandomMathExpession = (first, second) => {
+  let answer = 0;
+  let question = '';
+  let returnOperationSign = '';
+  const operations = '+-*';
+  const random = getRandomNum(0, operations.length - 1);
   switch (random) {
     case 0:
-      answerGame = sum(first, second);
-      questionGame = `${first} + ${second}`;
+      answer = first + second;
+      returnOperationSign = '+';
       break;
     case 1:
-      answerGame = diff(first, second);
-      questionGame = `${first} - ${second}`;
+      answer = first - second;
+      returnOperationSign = '-';
       break;
     default:
-      answerGame = multi(first, second);
-      questionGame = `${first} * ${second}`;
+      answer = first * second;
+      returnOperationSign = '*';
       break;
   }
-  return cons(questionGame, answerGame.toString());
+  question = `${first} ${returnOperationSign} ${second}`;
+  return cons(question, answer.toString());
 };
-const play = () => startGame(description, getRandomMathExpession);
+
+const getQuestionAnswer = () => {
+  const firstNumber = getRandomNum(1, 100);
+  const secondNumber = getRandomNum(1, 100);
+  const result = getRandomMathExpession(firstNumber, secondNumber);
+  const question = car(result);
+  const answer = cdr(result);
+  return cons(question, answer);
+};
+
+const play = () => startGame(description, getQuestionAnswer);
 export default play;

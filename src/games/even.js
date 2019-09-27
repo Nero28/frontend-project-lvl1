@@ -3,14 +3,12 @@ import { startGame, getRandomNum } from '../core';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const isEven = (number) => {
-  const isAnswer = number % 2 === 0 ? 'yes' : 'no';
-  return isAnswer;
+const isEven = (number) => !(number % 2);
+
+const getQuestionAnswer = () => {
+  const question = getRandomNum(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return cons(question, answer);
 };
-const defineEvenNumber = () => {
-  const questionGame = getRandomNum(1, 100);
-  const answerGame = isEven(questionGame);
-  return cons(questionGame, answerGame);
-};
-const play = () => startGame(description, defineEvenNumber);
+const play = () => startGame(description, getQuestionAnswer);
 export default play;

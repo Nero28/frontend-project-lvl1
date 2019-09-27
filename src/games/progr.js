@@ -1,26 +1,31 @@
-import { cons } from '@hexlet/pairs';
+import { cons, car, cdr } from '@hexlet/pairs';
 import { startGame, getRandomNum } from '../core';
 
 const description = 'What number is missing in the progression?';
-const returnArifmeticProgression = () => {
-  let sequence = 0;
-  const rand = getRandomNum(1, 10);
-  const start = getRandomNum(1, 100);
-  const step = rand;
-  let result = start;
-  let questionGame = '';
-  let answerGame = 0;
-  while (sequence < 10) {
-    result += step;
-    sequence += 1;
-    if (rand === sequence) {
-      questionGame = `${questionGame} .. `;
-      answerGame = result;
+const returnArifmeticProgression = (stepLength, sequenceStart) => {
+  const step = stepLength;
+  let result = sequenceStart;
+  let question = '';
+  let answer = 0;
+  for (let sequence = 0; sequence < 10; sequence += 1) {
+    if (stepLength === sequence) {
+      question = `${question} ..`;
+      answer = result;
     } else {
-      questionGame = `${questionGame} ${start + step * sequence} `;
+      question = `${question} ${sequenceStart + step * sequence}`;
     }
+    result += step;
   }
-  return cons(questionGame, answerGame.toString());
+  return cons(question, answer.toString());
 };
-const play = () => startGame(description, returnArifmeticProgression);
+
+const getQuestionAnswer = () => {
+  const firstNumber = getRandomNum(1, 10);
+  const secondNumber = getRandomNum(1, 100);
+  const result = returnArifmeticProgression(firstNumber, secondNumber);
+  const question = car(result);
+  const answer = cdr(result);
+  return cons(question, answer);
+};
+const play = () => startGame(description, getQuestionAnswer);
 export default play;
