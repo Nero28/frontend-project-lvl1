@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "description": "Brain Games Hexlet project №1 ",
   "homepage": "https://github.com/Nero28/frontend-project-lvl1",
-  "url" : "https://github.com/Nero28/frontend-project-lvl1/issues",
+  "url": "https://github.com/Nero28/frontend-project-lvl1/issues",
   "bin": {
     "brain-even": "src/bin/brain-even.js",
     "brain-calc": "src/bin/brain-calc.js",
@@ -18,7 +18,7 @@
   },
   "author": "Stanislav Shatskiy",
   "license": "ISC",
-  "keywords":[
+  "keywords": [
     "brain",
     "games",
     "even",
@@ -26,7 +26,7 @@
     "gcd",
     "progression",
     "prime"
-],
+  ],
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

@@ -14,15 +14,14 @@ const calculate = (operator, a, b) => {
     case '*':
       return a * b;
     default:
-      return '';
+      return null;
   }
 };
 
 const getGameData = () => {
   const number1 = getRandomNum(1, 100);
   const number2 = getRandomNum(1, 100);
-  const i = getRandomNum(0, operations.length - 1);
-  const sign = operations[i];
+  const sign = operations[getRandomNum(0, operations.length - 1)];
   const question = `${number1} ${sign} ${number2}`;
   const answer = calculate(sign, number1, number2);
   return cons(question, answer.toString());
