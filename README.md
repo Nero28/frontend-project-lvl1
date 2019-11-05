@@ -8,7 +8,7 @@ Project Hexlet.io
 
 ## INSTALL:
 
-```npm i nerobraingames```
+```sudo npm install -g five_simple_brain_games```
 
 **Run game - EVEN** *(Answer "yes" if number even otherwise answer "no".)*
 
