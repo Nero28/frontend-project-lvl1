@@ -10,32 +10,62 @@ Project Hexlet.io
 
 ```sudo npm install -g five_simple_brain_games```
 
+
+
+[![asciicast](https://asciinema.org/a/FVA7S7s7Ms8oz4xQSyeVAgcby.svg)](https://asciinema.org/a/FVA7S7s7Ms8oz4xQSyeVAgcby)
+
+
+
+
 **Run game - EVEN** *(Answer "yes" if number even otherwise answer "no".)*
 
 ```brain-even```
 
-https://asciinema.org/a/NhWVva3j6AyX3tAZLQkuNVAE5
+
+
+[![asciicast](https://asciinema.org/a/8xuZ3b87cpPso4ejxKxNT66ik.svg)](https://asciinema.org/a/8xuZ3b87cpPso4ejxKxNT66ik)
+
+
+
 
 **Run game - CALC** *(What is the result of the expression?)*
 
 ```brain-calc```
 
-https://asciinema.org/a/D5xARj8SeHBDAWWJvxjoDWUFI
 
-**Run game - GCD** *(Find the greatest common divisor of given numbers.)*
+
+[![asciicast](https://asciinema.org/a/nIwIj8M5v58VOQzq5wIYfNXdu.svg)](https://asciinema.org/a/nIwIj8M5v58VOQzq5wIYfNXdu)
+
+
+
+
+**Run game - Find GCD** *(Find the greatest common divisor of given numbers.)*
 
 ```brain-gcd```
 
-https://asciinema.org/a/ZurHgkx5cPvjca80PdQzyAEIH
+
+
+[![asciicast](https://asciinema.org/a/tf0RZaYibesY9ZejODqFMsLdE.svg)](https://asciinema.org/a/tf0RZaYibesY9ZejODqFMsLdE)
+
+
+
 
 **Run game - PROGRESSION** *(What number is missing in the progression?)*
 
 ```brain-progression```
 
-https://asciinema.org/a/r3SF3h39rOTjDOKOnNX5aTZ6m
+
+
+[![asciicast](https://asciinema.org/a/t9avEvhjXFdtUP8RONT0BM5nE.svg)](https://asciinema.org/a/t9avEvhjXFdtUP8RONT0BM5nE)
+
+
+
 
 **Run game - PRIME** *(Answer "yes" if given number is prime. Otherwise answer "no".)*
 
 ```brain-prime```
 
-https://asciinema.org/a/3DwFguGVxjHivzsJsolcu8G3Z
+
+
+[![asciicast](https://asciinema.org/a/LYsLjFmhnZOUWHXRmmSvwO2w7.svg)](https://asciinema.org/a/LYsLjFmhnZOUWHXRmmSvwO2w7)
+
