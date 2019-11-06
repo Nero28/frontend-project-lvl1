@@ -10,11 +10,11 @@ const getGameData = () => {
   const startElement = getRandomNum(1, 100);
   let sequence = '';
   for (let i = 0; i < length; i += 1) {
-    const nextElement = i === missedElementIndex ? '..' : `${startElement + i * stepSequence}`;
+    const nextElement = i === missedElementIndex ? '.. ' : `${startElement + i * stepSequence} `;
     sequence = `${sequence}${nextElement}`;
   }
   const question = sequence;
   const answer = startElement + missedElementIndex * stepSequence;
-  return cons(question, answer.toString());
+  return cons(question.trim(), answer.toString());
 };
 export default () => startGame(description, getGameData);
