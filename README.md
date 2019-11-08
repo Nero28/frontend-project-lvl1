@@ -8,7 +8,7 @@ Project Hexlet.io
 
 ## INSTALL:
 
-```sudo npm install -g five_simple_brain_games```
+```npm install -g five_simple_brain_games```
 
 
 

@@ -4,6 +4,7 @@ import { getRandomNum } from '../utils';
 
 const description = 'What number is missing in the progression?';
 const length = 10;
+
 const getGameData = () => {
   const missedElementIndex = getRandomNum(0, length - 1);
   const stepSequence = getRandomNum(1, 10);
@@ -17,4 +18,5 @@ const getGameData = () => {
   const answer = startElement + missedElementIndex * stepSequence;
   return cons(question.trim(), answer.toString());
 };
+
 export default () => startGame(description, getGameData);

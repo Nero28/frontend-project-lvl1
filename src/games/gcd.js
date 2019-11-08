@@ -24,6 +24,7 @@ const getGcd = (first, second) => {
   }
   return getGcd(first, remainder);
 };
+
 const getGameData = () => {
   const number1 = getRandomNum(1, 47);
   const number2 = getRandomNum(1, 47);
@@ -31,4 +32,5 @@ const getGameData = () => {
   const answer = getGcd(number1, number2);
   return cons(question, answer.toString());
 };
+
 export default () => startGame(description, getGameData);

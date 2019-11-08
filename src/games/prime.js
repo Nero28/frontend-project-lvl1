@@ -19,4 +19,5 @@ const getGameData = () => {
   const answer = isPrime(question) ? 'yes' : 'no';
   return cons(question, answer.toString());
 };
+
 export default () => startGame(description, getGameData);
