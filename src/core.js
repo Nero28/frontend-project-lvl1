@@ -22,10 +22,10 @@ export default (description, getGameData) => {
     const correctAnswer = cdr(dataGame);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-    } else {   
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${userName}!`);
-    return;
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
     iter(counter + 1);
   };
