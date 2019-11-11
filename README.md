@@ -12,7 +12,7 @@ Project Hexlet.io
 
 
 
-[![asciicast](https://asciinema.org/a/FVA7S7s7Ms8oz4xQSyeVAgcby.svg)](https://asciinema.org/a/FVA7S7s7Ms8oz4xQSyeVAgcby)
+[![asciicast](https://asciinema.org/a/a2r6DtEGZGulRdMNvkrbw7uYF.svg)](https://asciinema.org/a/a2r6DtEGZGulRdMNvkrbw7uYF)
 
 
 
